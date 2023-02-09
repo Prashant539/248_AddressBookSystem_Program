@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 namespace AddressBookProgram
 {
     internal class Program
@@ -16,10 +20,13 @@ namespace AddressBookProgram
                     "2) Find the Display of Contacts\n" +
                     "3) Find the edit contacts\n" +
                     "4) Find the delete contacts\n" +
-                    "5) Ability to add Multiple person in AddressBook\n");
+                    "5) Ability to add Multiple person in AddressBook\n" +
+                    "6) Ability to add Multiple AddressBook using Dictionary\n" +
+                    "7) Find the DisplayList of Dictionary\n");
 
                 int option = Convert.ToInt32(Console.ReadLine());
-                
+                int count = 0;
+
                 switch (option)
                 {
                     case 1:
@@ -39,6 +46,17 @@ namespace AddressBookProgram
                         break;
                     case 5:
                         Person.AddMultipleContacts();
+                        break;
+                    case 6:
+                        Person person1 = new Person();
+                        person1.NewUser();
+                       
+                        break;
+
+                    case 7:
+                        Person person2 = new Person();
+                        person2.DisplayList();
+
                         break;
 
                     default:
