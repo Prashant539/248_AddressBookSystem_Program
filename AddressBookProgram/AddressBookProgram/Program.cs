@@ -24,7 +24,8 @@ namespace AddressBookProgram
                     "6) Ability to add Multiple AddressBook using Dictionary\n" +
                     "7) Find the DisplayList of Dictionary\n" +
                     "8) Ability to ensure there is no Duplicate entry os same person\n" +
-                    "9) Ability to search Person in a City or State in Address Book\n");
+                    "9) Ability to search Person in a City or State in Address Book\n" +
+                    "10) Ability to view Person by City or State\n");
 
                 int option = Convert.ToInt32(Console.ReadLine());
                 int count = 0;
@@ -64,6 +65,10 @@ namespace AddressBookProgram
                     case 9:
                         Person person2 = new Person();
                         person2.SearchPersonByCity();
+                        break;
+                    case 10:
+                        Person person3 = new Person();
+                        person3.ViewPersonsByCity();
                         break;
 
                     default:
