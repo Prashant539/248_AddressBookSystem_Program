@@ -22,7 +22,8 @@ namespace AddressBookProgram
                     "4) Find the delete contacts\n" +
                     "5) Ability to add Multiple person in AddressBook\n" +
                     "6) Ability to add Multiple AddressBook using Dictionary\n" +
-                    "7) Find the DisplayList of Dictionary\n");
+                    "7) Find the DisplayList of Dictionary\n" +
+                    "8) Ability to ensure there is no Duplicate entry os same person\n");
 
                 int option = Convert.ToInt32(Console.ReadLine());
                 int count = 0;
@@ -47,16 +48,17 @@ namespace AddressBookProgram
                     case 5:
                         Person.AddMultipleContacts();
                         break;
+                   
                     case 6:
+                        person.NewUser();
+                        break;
+                    case 7:
                         Person person1 = new Person();
-                        person1.NewUser();
-                       
+                        person1.DisplayList();
                         break;
 
-                    case 7:
-                        Person person2 = new Person();
-                        person2.DisplayList();
-
+                    case 8:
+                        Person.DuplicateContact();
                         break;
 
                     default:

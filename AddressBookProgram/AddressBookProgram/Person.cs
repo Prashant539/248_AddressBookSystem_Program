@@ -146,7 +146,7 @@ namespace AddressBookProgram
             }
             book.Add(Bookname, person.ToList());
         }
-        public  void DisplayList()
+        public void DisplayList()
         {
             foreach (var pair in book.Keys)
             {
@@ -162,6 +162,23 @@ namespace AddressBookProgram
                     Console.WriteLine("Phone Number: " + data.PhoneNumber);
                     Console.WriteLine("EmailID: " + data.Email);
                 }
+            }
+        }
+        public static void DuplicateContact()
+        {
+            Console.WriteLine("enter the name to check: ");
+            string personName = Console.ReadLine();
+            Console.WriteLine("Enter phonenumber");
+            long phnnum = long.Parse(Console.ReadLine());
+            bool check = person.Any(e => e.FName == personName && e.PhoneNumber == phnnum);
+            if (check)
+            {
+                Console.WriteLine("contact is present");
+            }
+            else
+            {
+                Console.WriteLine("Contact is not present");
+                
             }
         }
     }
